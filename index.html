@@ -9,11 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <style>
-        
 
+    <style>
         html,
         body {
             position: relative;
@@ -100,7 +97,7 @@
         } */
 
         .up {
-            width: 100vw; 
+            width: 100vw;
             height: 50vw;
             background-image: url('img/cinema.png');
             background-position: center;
@@ -124,11 +121,11 @@
                 transform: scale(1.15);
             }
         }
+
         .seat {
             position: absolute;
             z-index: 100;
         }
-
     </style>
 </head>
 
@@ -148,61 +145,60 @@
 
             </nav>
         </div>
-        <div class="seat"><img src="img/seat_1.png" alt=" " style="width: 100vw; height: 47.25vw;"></div>
+        <div class="seat">
+            <img src="img/seat_1.png" alt=" " style="width: 100vw; height: 47.25vw;">
+        </div>
         <div class="enter_bottom">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide slidepic1"><img src="img/life.jpg" alt="" style="width: 100vw; height: 33.5vw;"></div>
-                    <div class="swiper-slide slidepic2"><img src="img/beau.jpg" alt="" style="width: 100vw; height: 33.5vw;"></div>
-                    <div class="swiper-slide slidepic3"><img src="img/flower.jpg" alt="" style="width: 100vw; height: 33.5vw;"></div>
-                    <div class="swiper-slide slidepic4"><img src="img/maze.jpg" alt="" style="width: 100vw; height: 33.5vw;"></div>
+                    <div class="swiper-slide slidepic1">
+                        <img src="img/life.jpg" alt="" style="width: 100vw; height: 33.5vw;">
+                    </div>
+                    <div class="swiper-slide slidepic2">
+                        <img src="img/beau.jpg" alt="" style="width: 100vw; height: 33.5vw;">
+                    </div>
+                    <div class="swiper-slide slidepic3">
+                        <img src="img/flower.jpg" alt="" style="width: 100vw; height: 33.5vw;">
+                    </div>
+                    <div class="swiper-slide slidepic4">
+                        <img src="img/maze.jpg" alt="" style="width: 100vw; height: 33.5vw;">
+                    </div>
 
                 </div>
 
             </div>
-        </div>  
+        </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
 
+        <script>
+            $(document).ready(function () {
 
+                var swiper = new Swiper('.swiper-container', {
+                    spaceBetween: 0,
+                    centeredSlides: true,
+                    preloadImages: !0,
 
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            spaceBetween: 0,
-            centeredSlides: true,
-            preloadImages: !0,
+                    speed: 3000,
+                    loop: true,
+                    autoplay: {
+                        delay: 1500,
+                        disableOnInteraction: false,
+                    },
+                });
 
-            speed: 3000,
-            loop: true,
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
-        });
-    </script>
+                swiper.slideTo(4, 0), setTimeout(function () {
+                    swiper.slideTo(1, 3000, !1)
+                }, 0), setTimeout(function () {
+                    swiper.autoplay.start();
+                }, 00);
 
-    <script>
-        // swiper.autoplay.stop();
-        // swiper.slideTo(5, 0)
-        // $(".btn").click(function () {
-
-        // })
-        // $(".btn2").click(function () {
-        //     swiper.slideTo(1, 4e3)
-
-        // })
-
-
-        swiper.slideTo(4, 0), setTimeout(function () {
-            swiper.slideTo(1, 3000, !1)
-        }, 0), setTimeout(function () {
-            swiper.startAutoplay()
-        }, 00)
-
-
-    </script>
-
+            });
+        </script>
 </body>
-
 </html>
