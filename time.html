@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    
+
+    <style>
+        .navbar {
+            background: linear-gradient(to bottom, rgba(206, 220, 231, 1) 0%, rgba(143, 151, 158, 1) 100%, rgba(149, 156, 165, 1) 100%);
+
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 1.5vw;
+            margin: 0 3vw;
+            color: #fff;
+            font-weight: 900;
+            text-shadow: 0 0 1vw rgb(15, 2, 99), 0 0 1vw rgb(39, 9, 231), 0 0 1vw rgb(35, 7, 221);
+            cursor: pointer;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+        }
+
+        .date {
+            background-color: #A1B6C2;
+
+        }
+
+        .time_right {
+            display: inline-block;
+            padding-left: 30px;
+        }
+
+
+        .tt_left {
+            height: 80px;
+            width: 80px;
+            vertical-align: top;
+            padding-top: 10px;
+            margin-right: 25px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .time_mid ul {
+            padding: 0;
+        }
+
+        .time_mid ul li {
+            display: inline-block;
+            margin-right: 5px;
+            letter-spacing: 5px;
+        }
+
+        .time_mid ul li:nth-child(3) {
+            border-left: solid 1px;
+            padding-left: 10px;
+        }
+
+        .time_mid ul li:nth-child(2) {
+            padding-left: 10px;
+        }
+
+        .time_mid ul li:nth-child(1) {
+            letter-spacing: 9px;
+        }
+
+        .time_bottom {
+            font-size: 20px;
+        }
+
+        .tb_left {
+            display: inline-flex;
+            width: 80px;
+            justify-content: space-between;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+
+        .tb_right {
+            display: inline-block;
+            letter-spacing: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>時刻查詢</li>
+            <li>電影介紹</li>
+            <li>票價資訊</li>
+            <li>活動公告</li>
+            <li>關於影城</li>
+        </ul>
+
+    </nav>
+    <div class="container">
+
+        <div class="title" style="margin-bottom:20px;">
+            <img src="img/clapperboard.svg" alt="" width="73" height="60" style="margin-top: 9px;">
+            <span style="font-size:50px;">時刻查詢</span>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="date">
+                    <ul>
+                        <li>02/02-02/07/2018</li>
+                        <li>02/08-02/13/2018</li>
+                    </ul>
+                </div>
+                <div class="info1">*上映廳別及場次，如有異動請議售票處當日公布為主</div>
+            </div>
+            <div class="col-md-9">
+                <div style="border-bottom: solid 5px white; background-color:black;">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="img/mazeposter.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-9" style="color: white;">
+                            <div class="time_right">
+                                <div class="time_top">
+                                    <div class="tt_left" style="display:inline-block;">
+                                        <img src="img/12+.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="tt_right" style="display:inline-block;">
+                                        <p style="font-size:35px; letter-spacing: 5px;">移動迷宮：死亡解藥</p>
+                                        <p style="font-size:20px; letter-spacing: 3px;">Maze Runner: The Death Cure</p>
+                                    </div>
+                                </div>
+                                <div class="time_mid">
+                                    <ul>
+                                        <li>2D英語</li>
+                                        <li>片長:2時22分</li>
+                                        <li>上映日期:2018/01/19</li>
+                                    </ul>
+                                </div>
+                                <div class="time_bottom">
+                                    <div class="tb_left">
+                                        <span>鳳</span>
+                                        <span>廳</span>
+                                    </div>
+                                    <div class="tb_right">10:20/13:00/15:40/18:20/
+                                        <br>21:00/23:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="border-bottom: solid 5px white; background-color:black;">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="img/god.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-9" style="color: white;">
+                            <div class="time_right">
+                                <div class="time_top">
+                                    <div class="tt_left" style="display:inline-block;">
+                                        <img src="img/12+.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="tt_right" style="display:inline-block;">
+                                        <p style="font-size:35px; letter-spacing: 10px;">與神同行</p>
+                                        <p style="font-size:20px; letter-spacing: 1px;">Along With the Gods: The Two Worlds</p>
+                                    </div>
+                                </div>
+                                <div class="time_mid">
+                                    <ul>
+                                        <li>2D韓語</li>
+                                        <li>片長:2時20分</li>
+                                        <li>上映日期:2017/12/22</li>
+                                    </ul>
+                                </div>
+                                <div class="time_bottom">
+                                    <div class="tb_left">
+                                        <span>龍</span>
+                                        <span>廳</span>
+                                    </div>
+                                    <div class="tb_right">10:00/12:40/15:20/18:00/
+                                        <br>20:40/23:20</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="border-bottom: solid 5px white; background-color:black;">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="img/ghost.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-9" style="color: white; ">
+                            <div class="time_right">
+                                <div class="time_top">
+                                    <div class="tt_left" style="display:inline-block;">
+                                        <img src="img/15+.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="tt_right" style="display:inline-block;">
+                                        <p style="font-size:35px; letter-spacing: 10px;">溫徹斯特鬼屋</p>
+                                        <p style="font-size:20px; letter-spacing: 5px;">Winchester</p>
+                                    </div>
+                                </div>
+                                <div class="time_mid">
+                                    <ul>
+                                        <li>2D英語</li>
+                                        <li>片長:1時39分</li>
+                                        <li>上映日期:2018/02/02</li>
+                                    </ul>
+                                </div>
+                                <div class="time_bottom">
+                                    <div class="tb_left">
+                                        <span>吉</span>
+                                        <span>祥</span>
+                                        <span>廳</span>
+                                    </div>
+                                    <div class="tb_right">10:30/14:50/19:10/23:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="border-bottom: solid 5px white; background-color:black;">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="img/money.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-9" style="color: white;">
+                            <div class="time_right">
+                                <div class="time_top">
+                                    <div class="tt_left" style="display:inline-block;">
+                                        <img src="img/15+.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="tt_right" style="display:inline-block;">
+                                        <p style="font-size:35px; letter-spacing: 10px;">金錢世界</p>
+                                        <p style="font-size:20px; letter-spacing: 5px;">All the Money in the World</p>
+                                    </div>
+                                </div>
+                                <div class="time_mid">
+                                    <ul>
+                                        <li>2D英語</li>
+                                        <li>片長:2時13分</li>
+                                        <li>上映日期:2018/02/02</li>
+                                    </ul>
+                                </div>
+                                <div class="time_bottom">
+                                    <div class="tb_left">
+                                        <span>吉</span>
+                                        <span>祥</span>
+                                        <span>廳</span>
+                                    </div>
+                                    <div class="tb_right">12:20/16:40/21:00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="border-bottom: solid 5px white; background-color:black;">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="img/smalllife.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-9" style="color: white;">
+                            <div class="time_right">
+                                <div class="time_top">
+                                    <div class="tt_left" style="display:inline-block;">
+                                        <img src="img/6+.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="tt_right" style="display:inline-block;">
+                                        <p style="font-size:35px; letter-spacing: 10px;">縮小人生</p>
+                                        <p style="font-size:20px; letter-spacing: 5px;">Downsizing</p>
+                                    </div>
+                                </div>
+                                <div class="time_mid">
+                                    <ul>
+                                        <li>2D英語</li>
+                                        <li>片長:2時16分</li>
+                                        <li>上映日期:2018/01/26</li>
+                                    </ul>
+                                </div>
+                                <div class="time_bottom">
+                                    <div class="tb_left">
+                                        <span>如</span>
+                                        <span>意</span>
+                                        <span>廳</span>
+                                    </div>
+                                    <div class="tb_right">11:50/14:20/16:50/19:20/
+                                        <br>23:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="border-bottom: solid 5px white; background-color:black;">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="img/beauty.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-9" style="color: white;">
+                            <div class="time_right">
+                                <div class="time_top">
+                                    <div class="tt_left" style="display:inline-block;">
+                                        <img src="img/15+.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="tt_right" style="display:inline-block;">
+                                        <p style="font-size:35px; letter-spacing: 10px;">魍美</p>
+                                        <p style="font-size:20px; letter-spacing: 5px;">Net, I Die</p>
+                                    </div>
+                                </div>
+                                <div class="time_mid">
+                                    <ul>
+                                        <li>2D英語</li>
+                                        <li>片長:2時16分</li>
+                                        <li>上映日期:2018/01/26</li>
+                                    </ul>
+                                </div>
+                                <div class="time_bottom">
+                                    <div class="tb_left">
+                                        <span>如</span>
+                                        <span>意</span>
+                                        <span>廳</span>
+                                    </div>
+                                    <div class="tb_right">15:10/21:50</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
