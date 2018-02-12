@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, rgba(206, 220, 231, 1) 0%, rgba(143, 151, 158, 1) 100%, rgba(149, 156, 165, 1) 100%);
+
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 1.5vw;
+            margin: 0 3vw;
+            color: #fff;
+            font-weight: 900;
+            /* text-shadow: 0 0 1vw rgb(15, 2, 99), 0 0 1vw rgb(39, 9, 231), 0 0 1vw rgb(35, 7, 221); */
+            cursor: pointer;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+        }
+
+        /* .movie_top {
+            margin-bottom: 100px;
+        } */
+
+        .stills_1 {
+            position: relative;
+        }
+
+        .play {
+            position: absolute;
+            bottom: 2.96875vw;
+            left: 21.4vw;
+            background-color: red;
+            border-radius: 0.52083vw;
+            border: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.5625vw;
+            padding: 0 0.52083vw;
+            cursor: pointer;
+
+        }
+
+        .movie_top a {
+            position: absolute;
+            bottom: 2.96875vw;
+            left: 30.458vw;
+            font-weight: 700;
+            font-size: 1.5625vw;
+            text-decoration: none;
+
+        }
+
+        .video {
+            display: none;
+        }
+
+        .poster {
+            cursor: pointer;
+        }
+
+        .movie_bottom img {
+            width: 18.59375vw;
+            height: 26.5625vw;
+        }
+
+        .negatives {
+            max-width: 100%;
+            background-repeat: repeat-x;
+            background-image: url('img/negatives.png');
+            height: 5.2083vw;
+            background-size: contain;
+        }
+
+        .negatives2 {
+            max-width: 100%;
+            background-repeat: repeat-x;
+            background-image: url('img/negatives2.png');
+            height: 5.2083vw;
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="time.html">時刻查詢</a>
+            </li>
+            <li>
+                <a href="movie.html">電影介紹</a>
+            </li>
+            <li>
+                <a href="ticket.html">票價資訊</a>
+            </li>
+            <li>
+                <a href="activity.html">活動公告</a>
+            </li>
+            <li><a href="movie.html">關於影城</a></li>
+        </ul>
+
+    </nav>
+    <div class="container">
+        <div class="movie_top">
+            <div class="stills_1">
+                <button class="play">Play&nbsp;&nbsp;
+                    <i class="fas fa-play"></i>
+                </button>
+                <a class="imdb" href="http://www.imdb.com/title/tt1389072/?ref_=fn_al_tt_1" target="_blank">IMDB</a>
+                <img class="img-fluid stills" src="img/intro/lifeintro.jpg" alt="">
+                <iframe class="video" width="100%" height="768" src="https://www.youtube.com/embed/d4ZCQ754wX0" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+            </div>
+
+        </div>
+        <div class="negatives"></div>
+        <div class="movie_bottom">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/F-k1t4CTXhWCw" data-imdb="http://www.imdb.com/title/tt7154176/?ref_=nv_sr_1"
+                            data-poster="img/intro/beautyintro.jpg" src="img/poster/beautyposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/oBr3vPY2c6s" data-imdb="http://www.imdb.com/title/tt5294550/?ref_=nv_sr_1"
+                            data-poster="img/intro/moneyintro.jpg" src="img/poster/moneyposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/d4ZCQ754wX0" data-imdb="http://www.imdb.com/title/tt1389072/?ref_=fn_al_tt_1"
+                            data-poster="img/intro/lifeintro.jpg" src="img/poster/lifeposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/KDNGieYQCco" data-imdb="http://www.imdb.com/title/tt1072748/?ref_=nv_sr_1"
+                            data-poster="img/intro/ghostintro.jpg" src="img/poster/ghostposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/N0p4hghSddo" data-imdb="http://www.imdb.com/title/tt4500922/?ref_=nv_sr_1"
+                            data-poster="img/intro/mazeintro.jpg" src="img/poster/mazeposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/4srrASoczPM" data-imdb="http://www.imdb.com/title/tt7160070/?ref_=nv_sr_1"
+                            data-poster="img/intro/godintro.jpg" src="img/poster/godposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/d1AUtI6wW8Y" data-imdb="http://www.imdb.com/title/tt3411444/?ref_=nv_sr_1"
+                            data-poster="img/intro/bullintro.jpg" src="img/poster/bullposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/aHKT7K_VkKM" data-imdb="http://www.imdb.com/title/tt1825683/?ref_=nv_sr_1"
+                            data-poster="img/intro/blackintro.jpg" src="img/poster/blackposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/3qU8m3OA_oc" data-imdb="http://www.imdb.com/title/tt7827658/?ref_=nv_sr_1"
+                            data-poster="img/intro/flowerintro.jpg" src="img/poster/flowerposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/O-7s-4bK9PQ" data-imdb="#" data-poster="img/intro/gataointro.jpg"
+                            src="img/poster/gataoposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/D-F_pAu7f2k" data-imdb="http://www.imdb.com/title/tt4477536/?ref_=nv_sr_1"
+                            data-poster="img/intro/grayintro.jpg" src="img/poster/grayposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/TSOfJ-D7XI8" data-imdb="http://www.imdb.com/title/tt6170484/?ref_=nv_sr_1"
+                            data-poster="img/intro/monsterintro.jpg" src="img/poster/monsterposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/hwZ6vmI4vYs" data-imdb="http://www.imdb.com/title/tt6802308/?ref_=nv_sr_1"
+                            data-poster="img/intro/parisintro.jpg" src="img/poster/parisposter.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid poster" data-video="https://www.youtube.com/embed/acVCVtNERpM" data-imdb="http://www.imdb.com/title/tt6294822/?ref_=nv_sr_1"
+                            data-poster="img/intro/postintro.jpg" src="img/poster/postposter.jpg" alt="">
+                    </div>
+                </div>
+                <div class="negatives2"></div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <script>
+        $(".poster").click(function () {
+            var poster = $(this).attr("data-poster");
+            var video = $(this).attr("data-video");
+            var imdb = $(this).attr("data-imdb");
+            $(".stills").attr("src", poster);
+            $(".video").attr("src", video);
+            $(".imdb").attr("href", imdb);
+            console.log(imdb);
+            $(".imdb").css("display", "block");
+            $(".stills").css("display", "block");
+            $(".video").css("display", "none");
+            $(".play").css("display", "block");
+        })
+    </script>
+    <script>
+        $(".play").click(function () {
+            $(".stills").css("display", "none");
+            $(".imdb").css("display", "none");
+            $(".video").css("display", "block");
+            $(this).css("display", "none");
+        })
+    </script>
+
+
+</body>
+
+</html>

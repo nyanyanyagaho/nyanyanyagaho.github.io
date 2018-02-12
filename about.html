@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html {
+            font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif;
+        }
+
+        body {
+            height: 3000px;
+            background-color: #000;
+            position: relative;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, rgba(206, 220, 231, 1) 0%, rgba(143, 151, 158, 1) 100%, rgba(149, 156, 165, 1) 100%);
+            z-index: 999;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 1.5vw;
+            margin: 0 3vw;
+            color: #fff;
+            font-weight: 900;
+            /* text-shadow: 0 0 1vw rgb(15, 2, 99), 0 0 1vw rgb(39, 9, 231), 0 0 1vw rgb(35, 7, 221); */
+            cursor: pointer;
+        }
+
+        .about_top {
+            position: relative;
+            max-width: 100%;
+            height: 36.146vw;
+            opacity: .8;
+            transition: 1.5s;
+            background-image: url('img/logo.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .about_bottom {
+            position: fixed;
+            background-image: url('img/about_bg.jpg');
+            background-repeat: repeat-y;
+            background-position: center;
+            background-size: cover;
+            top: 0;
+            opacity: .7;
+            width: 100%;
+            height: 5000px;
+            transition: 7s;
+            z-index: -9999;
+        }
+
+        .frontbg {
+            position: fixed;
+            background-image: url('img/star.png');
+            background-repeat: repeat-y;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            transition: 3s;
+            height: 5000px;
+            z-index: -999;
+        }
+
+        .about_bottom2 {
+            position: relative;
+            width: 100%;
+            height: 3325px;
+        }
+
+        .pic1 {
+            position: fixed;
+            width: 41.67vw;
+            transition: 0.5s;
+            right: 0;
+            opacity: 0;
+            top: 150px;
+            z-index: 99;
+        }
+
+        .box1 {
+            color: #fff;
+            /* background-color: rgba(255, 255, 255, 1); */
+            position: absolute;
+            width: 800px;
+            height: 410px;
+            transition: 0.5s linear;
+            top: 150px;
+            /* left: 7.29vw; */
+            opacity: 0;
+            text-align: center;
+            padding: 100px 0;
+            letter-spacing: 15px;
+            z-index: 99;
+        }
+
+        .pic2 {
+            position: fixed;
+            width: 41.67vw;
+            transition: 0.5s;
+            opacity: 0;
+            z-index: 99;
+        }
+
+        .box2 {
+            color: #fff;
+            /* background-color: rgb(238, 20, 20); */
+            position: absolute;
+            width: 41.67vw;
+            height: 450px;
+            transition: .5s;
+            /* top: 300px; */
+            right: 80px;
+            opacity: 0;
+            padding: 50px 0;
+            letter-spacing: 15px;
+            z-index: 99;
+        }
+
+        .pic3 {
+            position: fixed;
+            width: 41.67vw;
+            transition: .5s;
+            right: 0;
+            opacity: 0;
+            z-index: 99;
+        }
+
+        .box3 {
+            color: #fff;
+            /* background-color: rgb(18, 22, 233); */
+            position: absolute;
+            width: 41.67vw;
+            height: 410px;
+            transition: .5s;
+            /* top: 300px; */
+            left: 100px;
+            opacity: 0;
+            padding: 60px 0;
+            letter-spacing: 15px;
+            z-index: 99;
+        }
+
+        .pic4 {
+            position: fixed;
+            width: 41.67vw;
+            transition: .5s;
+            opacity: 0;
+            z-index: 99;
+        }
+
+        .box4 {
+            color: #fff;
+            /* background-color: rgb(238, 234, 20); */
+            position: absolute;
+            width: 800px;
+            height: 450px;
+            transition: .5s;
+            /* top: 300px; */
+            right: 0px;
+            opacity: 0;
+            text-align: center;
+            padding: 150px 0;
+            letter-spacing: 15px;
+            z-index: 99;
+        }
+
+        #pic5 {
+            position: fixed !important;
+            width: 41.67vw;
+            height: 450px;
+            transition: .5s;
+            right: 0;
+            opacity: 0;
+            z-index: 99;
+        }
+
+        .box5 {
+            color: #fff;
+            /* background-color: rgb(25, 233, 18); */
+            position: absolute;
+            width: 800px;
+            height: 450px;
+            transition: .5s;
+            /* top: 300px; */
+            /* left: 120px; */
+            opacity: 0;
+            text-align: center;
+            padding: 100px 0;
+            letter-spacing: 15px;
+            z-index: 99;
+        }
+
+        p {
+            text-shadow: 0px 1px rgb(232, 243, 83);
+        }
+
+        .container-sitemap {
+            position: absolute;
+            width: 100%;
+            background-color: rgb(123, 131, 139);
+            opacity: 0.8;
+            height: 140px;
+            bottom: 0;
+        }
+
+        .sitemap-all {
+            text-align: center;
+        }
+
+        .sitemap {
+            display: inline-block;
+            margin-top: 60px;
+            border-right: solid 1px black;
+            line-height: 18px;
+            font-size: 18px;
+        }
+
+        .sitemap-all li a {
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 20px;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            background-color: #3D3D3D;
+            color: white;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0px;
+            letter-spacing: 2px;
+            font-size: 20px;
+        }
+
+        .shotstar {
+            position: fixed;
+            /* background-color: #000; */
+            width: 100%;
+            height: 100vh;
+            top: 0;
+        }
+        .light1 {
+            position: absolute;
+            background-color: yellow;
+            width: 2px;
+            height: 2px;
+            top: 700px;
+            left: 200px;
+            animation: light1 8s forwards;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes light1 {
+            0% {
+                top: 700px;
+                left: 200px;
+                opacity: 1;
+            }
+            7% {
+                top: 950px;
+                left: 400px;
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .light2 {
+            position: absolute;
+            background-color: #fff;
+            width: 3px;
+            height: 3px;
+            top: 200px;
+            left: 700px;
+            animation: light2 10s forwards;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes light2 {
+            0% {
+                top: 200px;
+                left: 700px;
+                opacity: 1;
+            }
+            5% {
+                top: 500px;
+                left: 1400px;
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .light3 {
+            position: absolute;
+            background-color: rgb(248, 180, 180);
+            width: 5px;
+            height: 5px;
+            top: 50px;
+            left: 1300px;
+            animation: light3 15s forwards;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes light3 {
+            0% {
+                top: 50px;
+                left: 1300px;
+                opacity: 1;
+            }
+            3.5% {
+                top: 250px;
+                left: 1500px;
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .light4 {
+            position: absolute;
+            background-color: rgb(30, 16, 233);
+            width: 3px;
+            height: 3px;
+            top: 100px;
+            left: 0px;
+            animation: light4 18s forwards;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes light4 {
+            0% {
+                top: 100px;
+                left: 0px;
+                opacity: 1;
+            }
+            2.8% {
+                top: 300px;
+                left: 300px;
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .light5 {
+            position: absolute;
+            background-color: rgb(42, 224, 18);
+            width: 5px;
+            height: 5px;
+            top: 800px;
+            left: 1500px;
+            animation: light5 22s forwards;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes light5 {
+            0% {
+                top: 800px;
+                left: 1500px;
+                opacity: 1;
+            }
+            2.3% {
+                top: 950px;
+                left: 1900px;
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .light6 {
+            position: absolute;
+            background-color: rgb(236, 169, 24);
+            width: 4px;
+            height: 4px;
+            top: 400px;
+            left: 1650px;
+            animation: light6 26s forwards;
+            animation-iteration-count: infinite;
+        }
+        @keyframes light6 {
+            0% {
+                top: 400px;
+                left: 1650px;
+                opacity: 1;
+            }
+            1.9% {
+                top: 700px;
+                left: 1750px;
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .light7 {
+            position: absolute;
+            background-color: #fff;
+            width: 3px;
+            height: 3px;
+            top: 550px;
+            left: 500px;
+            animation: light7 13s forwards;
+            animation-iteration-count: infinite;
+        }
+        @keyframes light7 {
+            0% {
+                top: 550px;
+                left: 500px;
+                opacity: 1;
+            }
+            3.84% {
+                top: 600px;
+                left: 1000px;
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        /* .end {
+            position: absolute;
+            background-color: #000;
+            width: 100%;
+            height: 100vh;
+            bottom: -1616px;
+        } */
+        /* T */
+        /* .endbox1 {
+            animation: endan1 5s forwards;
+            animation-iteration-count: infinite;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 500px;
+        }
+        @keyframes endan1 {
+            10%{
+                top: 125px;
+                background-color: red;
+            }
+            20%{
+                top: 150px;
+                background-color: yellow;
+            }
+
+        }
+        
+        .endbox2 {
+            animation: endan2 5s forwards;
+            animation-iteration-count: infinite;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 550px;
+        }
+        @keyframes endan2 {
+            50%{
+                top: 125px;
+                background-color: red;
+            }
+            80%{
+                top: 150px;
+                background-color: yellow;
+            }
+        }
+        .endbox3 {
+            animation: endan3 2s forwards;
+            animation-iteration-count: infinite;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 600px;
+        }
+        @keyframes endan3 {
+            50%{
+                top: 125px;
+                background-color: red;
+            }
+            80%{
+                top: 150px;
+                background-color: yellow;
+            }
+        }
+        .endbox4 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 650px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox5 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 700px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox6 {
+            animation: endan3 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 200px;
+            left: 600px;
+        }
+        @keyframes endan3 {
+            50%{
+                top: 125px;
+                background-color: red;
+            }
+            80%{
+                top: 150px;
+                background-color: yellow;
+            }
+        }
+        .endbox7 {
+            animation: endan3 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 600px;
+        }
+        @keyframes endan3 {
+            50%{
+                top: 125px;
+                background-color: red;
+            }
+            80%{
+                top: 150px;
+                background-color: yellow;
+            }
+        }
+        .endbox8 {
+            animation: endan3 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 300px;
+            left: 600px;
+        }
+        @keyframes endan3 {
+            50%{
+                top: 125px;
+                background-color: red;
+            }
+            80%{
+                top: 150px;
+                background-color: yellow;
+            }
+        }
+        .endbox9 {
+            animation: endan3 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 350px;
+            left: 600px;
+        }
+        @keyframes endan3 {
+            50%{
+                top: 125px;
+                background-color: red;
+            }
+            80%{
+                top: 150px;
+                background-color: yellow;
+            }
+        } */
+        /* h  */
+        /* .endbox10 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 800px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox11 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 200px;
+            left: 800px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox12 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 800px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox13 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 300px;
+            left: 800px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox14 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 350px;
+            left: 800px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox15 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 850px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox16 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 900px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox17 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 950px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox18 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 1000px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox19 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 1000px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox20 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 200px;
+            left: 1000px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox21 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 300px;
+            left: 1000px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox22 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 350px;
+            left: 1000px;
+        }
+        @keyframes endan {
+
+        } */
+
+        /* E */
+        /* .endbox23 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 1100px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox24 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 200px;
+            left: 1100px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox25 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 1100px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox26 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 300px;
+            left: 1100px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox27 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 350px;
+            left: 1100px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox28 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 1150px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox29 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 1200px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox30 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 1250px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox31 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 150px;
+            left: 1300px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox32 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 1150px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox33 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 1200px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox34 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 1250px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox35 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 250px;
+            left: 1300px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox36 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 350px;
+            left: 1150px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox37 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 350px;
+            left: 1200px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox38 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 350px;
+            left: 1250px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox39 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 350px;
+            left: 1300px;
+        }
+        @keyframes endan {
+
+        } */
+        /* E */
+        /* .endbox40 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 500px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox41 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 500px;
+            left: 500px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox42 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 550px;
+            left: 500px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox43 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 600px;
+            left: 500px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox44 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 500px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox45 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 550px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox46 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 600px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox47 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 650px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox48 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 700px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox49 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 550px;
+            left: 550px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox50 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 550px;
+            left: 600px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox51 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 550px;
+            left: 650px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox52 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 550px;
+            left: 700px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox53 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 550px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox54 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 600px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox55 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 650px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox56 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 700px;
+        }
+        @keyframes endan {
+
+        } */
+        /* N */
+        /* .endbox57 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 800px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox58 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 500px;
+            left: 800px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox59 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 550px;
+            left: 800px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox60 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 600px;
+            left: 800px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox61 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 800px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox62 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 850px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox63 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 500px;
+            left: 875px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox64 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 550px;
+            left: 900px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox65 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 600px;
+            left: 925px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox66 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 950px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox67 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 1000px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox68 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 500px;
+            left: 1000px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox69 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 550px;
+            left: 1000px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox70 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 600px;
+            left: 1000px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox71 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 1000px;
+        }
+        @keyframes endan {
+
+        } */
+        /* D */
+        /* .endbox72 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 1100px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox73 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 500px;
+            left: 1100px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox74 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 550px;
+            left: 1100px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox75 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 600px;
+            left: 1100px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox76 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 1100px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox77 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 1150px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox78 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 1200px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox79 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 450px;
+            left: 1225px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox80 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 475px;
+            left: 1250px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox81 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 500px;
+            left: 1275px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox82 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 525px;
+            left: 1300px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox83 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 550px;
+            left: 1300px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox84 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 575px;
+            left: 1300px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox85 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 600px;
+            left: 1275px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox86 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 625px;
+            left: 1250px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox87 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 1225px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox88 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 1200px;
+        }
+        @keyframes endan {
+
+        }
+        .endbox89 {
+            animation: endan 2s forwards;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            top: 650px;
+            left: 1150px;
+        }
+        @keyframes endan {
+
+        } */
+
+    </style>
+</head>
+
+<body>
+    <div class="enter_top">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="time.html">時刻查詢</a>
+                </li>
+                <li>
+                    <a href="movie.html">電影介紹</a>
+                </li>
+                <li>
+                    <a href="ticket.html">票價資訊</a>
+                </li>
+                <li>
+                    <a href="activity.html">活動公告</a>
+                </li>
+                <li>
+                    <a href="about.html">關於影城</a>
+                </li>
+            </ul>
+    
+        </nav>
+        <div class="about_top">
+        </div>
+        <div class="about_bottom">
+            <div class="frontbg"></div>
+        </div>
+        <div class="about_bottom2">
+            <div class="pic1">
+                <img class="img-fluid" src="img/cinema.jpg" alt="">
+            </div>
+            <!-- <div class="box1" data-aos="flip-left" data-aos-offset="800" data-aos-duration="2000" data-aos-delay="1000" data-aos-easing="ease-in-out-quart"></div> -->
+            <div class="box1">
+                <p style="font-size: 30px;">成立時間</p>
+                <p style="font-size: 50px;">1985年</p>
+            </div>
+            <div class="pic2">
+                <img class="img-fluid" src="img/inner.jpg" alt="">
+            </div>
+            <div class="box2">
+                <p style="text-align: center; font-size: 40px;">影廳特色</p>
+                <p style="font-size: 20px;">2009年升級為3D數位影城音效，採用新型環繞音響、DTS電腦數位音效，並搭配BARCO數位機系統、全新規格的3D DLP READY系統，加上3D立體眼鏡，讓消費者感受超水準的影音震撼。</p>
+            </div>
+            <div class="pic3">
+                <img class="img-fluid" src="img/street.jpg" alt="">
+            </div>
+            <div class="box3">
+                <p style="text-align: center; font-size: 40px;">地理位置</p>
+                <p style="font-size: 20px;">位於豐原區市中心，周邊緊連豐原廟東夜市小吃與各特色商店，鄰近擁有停車場與太平洋百貨和服飾精品店，讓消費者有多元選擇。</p>
+            </div>
+            <div class="pic4">
+                <img class="img-fluid" src="img/entrance.jpg" alt="">
+            </div>
+            <div class="box4">
+                <p style="font-size: 50px;">營業時間</p>
+                <p style="font-size: 35px;">10：00 ～ 00：00</p>
+            </div>
+            <div id="pic5"></div>
+            <div class="box5">
+                <p style="font-size: 40px;">電話</p>
+                <p style="font-size: 25px;">（04）-2520-0036</p>
+                <p style="font-size: 40px;">地址</p>
+                <p style="font-size: 25px;">台中市豐原區中正路137號</p>
+            </div>
+            
+            
+            <div class="container-sitemap">
+                <ul class=sitemap-all>
+                    <li class=sitemap>
+                        <a href="">時刻查詢</a>
+                    </li>
+                    <li class=sitemap>
+                        <a href="">電影介紹</a>
+                    </li>
+                    <li class=sitemap>
+                        <a href="">票價資訊</a>
+                    </li>
+                    <li class=sitemap>
+                        <a href="">活動公告</a>
+                    </li>
+                    <li class=sitemap style="  border-right: none" ;>
+                        <a href="">關於影城</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="end">
+            <div class="endbox1"></div>
+            <div class="endbox2"></div>
+            <div class="endbox3"></div>
+            <div class="endbox4"></div>
+            <div class="endbox5"></div>
+            <div class="endbox6"></div>
+            <div class="endbox7"></div>
+            <div class="endbox8"></div>
+            <div class="endbox9"></div>
+            <div class="endbox10"></div>
+            <div class="endbox11"></div>
+            <div class="endbox12"></div>
+            <div class="endbox13"></div>
+            <div class="endbox14"></div>
+            <div class="endbox15"></div>
+            <div class="endbox16"></div>
+            <div class="endbox17"></div>
+            <div class="endbox18"></div>
+            <div class="endbox19"></div>
+            <div class="endbox20"></div>
+            <div class="endbox21"></div>
+            <div class="endbox22"></div>
+            <div class="endbox23"></div>
+            <div class="endbox24"></div>
+            <div class="endbox25"></div>
+            <div class="endbox26"></div>
+            <div class="endbox27"></div>
+            <div class="endbox28"></div>
+            <div class="endbox29"></div>
+            <div class="endbox30"></div>
+            <div class="endbox31"></div>
+            <div class="endbox32"></div>
+            <div class="endbox33"></div>
+            <div class="endbox34"></div>
+            <div class="endbox35"></div>
+            <div class="endbox36"></div>
+            <div class="endbox37"></div>
+            <div class="endbox38"></div>
+            <div class="endbox39"></div>
+            <div class="endbox40"></div>
+            <div class="endbox41"></div>
+            <div class="endbox42"></div>
+            <div class="endbox43"></div>
+            <div class="endbox44"></div>
+            <div class="endbox45"></div>
+            <div class="endbox46"></div>
+            <div class="endbox47"></div>
+            <div class="endbox48"></div>
+            <div class="endbox49"></div>
+            <div class="endbox50"></div>
+            <div class="endbox51"></div>
+            <div class="endbox52"></div>
+            <div class="endbox53"></div>
+            <div class="endbox54"></div>
+            <div class="endbox55"></div>
+            <div class="endbox56"></div>
+            <div class="endbox57"></div>
+            <div class="endbox58"></div>
+            <div class="endbox59"></div>
+            <div class="endbox60"></div>
+            <div class="endbox61"></div>
+            <div class="endbox62"></div>
+            <div class="endbox63"></div>
+            <div class="endbox64"></div>
+            <div class="endbox65"></div>
+            <div class="endbox66"></div>
+            <div class="endbox67"></div>
+            <div class="endbox68"></div>
+            <div class="endbox69"></div>
+            <div class="endbox70"></div>
+            <div class="endbox71"></div>
+            <div class="endbox72"></div>
+            <div class="endbox73"></div>
+            <div class="endbox74"></div>
+            <div class="endbox75"></div>
+            <div class="endbox76"></div>
+            <div class="endbox77"></div>
+            <div class="endbox78"></div>
+            <div class="endbox79"></div>
+            <div class="endbox80"></div>
+            <div class="endbox81"></div>
+            <div class="endbox82"></div>
+            <div class="endbox83"></div>
+            <div class="endbox84"></div>
+            <div class="endbox85"></div>
+            <div class="endbox86"></div>
+            <div class="endbox87"></div>
+            <div class="endbox88"></div>
+            <div class="endbox89"></div>
+
+        </div> -->
+        <div class="shotstar">
+                <div class="light1"></div>
+                <div class="light2"></div>
+                <div class="light3"></div>
+                <div class="light4"></div>
+                <div class="light5"></div>
+                <div class="light6"></div>
+                <div class="light7"></div>
+        </div>
+        
+        <footer>
+            <p>© Copyright All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            console.log(scrollTop)
+            $(".about_top").css("top", -scrollTop);
+            if (scrollTop > 200) {
+                $(".about_top").css("opacity", "0");
+            } else {
+                $(".about_top").css("opacity", ".8");
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            // console.log(scrollTop)
+            $(".about_bottom").css("top", -scrollTop);
+            // if (scrollTop > 280 || scrollTop < 200) {
+            //     $(".box").css("opacity", "0");
+            // } else {
+            //     $(".box").css("opacity", "1");
+            // }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            // console.log(scrollTop)
+            $(".frontbg").css("top", -scrollTop);
+            // if (scrollTop > 280 || scrollTop < 200) {
+            //     $(".box").css("opacity", "0");
+            // } else {
+            //     $(".box").css("opacity", "1");
+            // }
+        });
+
+
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() - 647;
+            // console.log(scrollTop)
+            $(".pic1").css("top", -scrollTop);
+            if (scrollTop > 152 || scrollTop < -444) {
+                $(".pic1").css("opacity", "0");
+            } else {
+                $(".pic1").css("opacity", "1");
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() - 550;
+            // console.log(scrollTop)
+            $(".box1").css("top", -scrollTop);
+            if (scrollTop > 50 || scrollTop < -250) {
+                $(".box1").css("opacity", "0");
+            } else {
+                $(".box1").css("opacity", "1");
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() - 1257;
+            // console.log(scrollTop)
+            $(".pic2").css("top", -scrollTop);
+            if (scrollTop > 143 || scrollTop < -457) {
+                $(".pic2").css("opacity", "0");
+            } else {
+                $(".pic2").css("opacity", "1");
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() - 1775;
+            // console.log(scrollTop)
+            $(".box2").css("top", -scrollTop);
+            if (scrollTop > -475 || scrollTop < -875) {
+                $(".box2").css("opacity", "0");
+            } else {
+                $(".box2").css("opacity", "1");
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() - 1857;
+            // console.log(scrollTop)
+            $(".pic3").css("top", -scrollTop);
+            if (scrollTop > 143 || scrollTop < -434) {
+                $(".pic3").css("opacity", "0");
+            } else {
+                $(".pic3").css("opacity", "1");
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() - 2975;
+            // console.log(scrollTop)
+            $(".box3").css("top", -scrollTop);
+            if (scrollTop > -1052 || scrollTop < -1452) {
+                $(".box3").css("opacity", "0");
+            } else {
+                $(".box3").css("opacity", "1");
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() - 2457;
+            // console.log(scrollTop)
+            $(".pic4").css("top", -scrollTop);
+            if (scrollTop > 166 || scrollTop < -434) {
+                $(".pic4").css("opacity", "0");
+            } else {
+                $(".pic4").css("opacity", "1");
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() - 4175;
+            // console.log(scrollTop)
+            $(".box4").css("top", -scrollTop);
+            if (scrollTop > -1552 || scrollTop < -2052) {
+                $(".box4").css("opacity", "0");
+            } else {
+                $(".box4").css("opacity", "1");
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() - 3057;
+            // console.log(scrollTop)
+            $("#pic5").css("top", -scrollTop);
+            if (scrollTop > 194 || scrollTop < -334) {
+                $("#pic5").css("opacity", "0");
+            } else {
+                $("#pic5").css("opacity", "1");
+            }
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() - 5375;
+            console.log(scrollTop)
+            $(".box5").css("top", -scrollTop);
+            if (scrollTop > -2252 || scrollTop < -2652) {
+                $(".box5").css("opacity", "0");
+            } else {
+                $(".box5").css("opacity", "1");
+            }
+        });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG5YXzb7D79YV0JPtfQhY6NX9BE2Didhc&callback=initMap" async
+        defer>
+        </script>
+    <script>
+        function initMap() {
+            var uluru = { lat: 24.251705, lng: 120.719995 };
+            var map = new google.maps.Map(document.getElementById('pic5'), {
+                zoom: 17,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+</body>
+
+</html>

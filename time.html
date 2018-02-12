@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+    <!-- boostrap的CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- hover.css的css檔連結 -->
+    <link rel="stylesheet" href="css/hover-min.css">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, rgba(206, 220, 231, 1) 0%, rgba(143, 151, 158, 1) 100%, rgba(149, 156, 165, 1) 100%);
+
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 1.5vw;
+            margin: 0 3vw;
+            color: #fff;
+            font-weight: 900;
+            /* text-shadow: 0 0 1vw rgb(15, 2, 99), 0 0 1vw rgb(39, 9, 231), 0 0 1vw rgb(35, 7, 221); */
+            cursor: pointer;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .container {
+            margin-bottom: 100px;
+        }
+
+        .container-fluid {
+            background-image: url('img/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .date {
+            background-color: #A1B6C2;
+
+        }
+
+        .time_right {
+            display: inline-block;
+            padding-left: 30px;
+        }
+
+
+        .tt_left {
+            height: 80px;
+            width: 80px;
+            vertical-align: top;
+            padding-top: 10px;
+            margin-right: 25px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .time_mid ul {
+            padding: 0;
+        }
+
+        .time_mid ul li {
+            display: inline-block;
+            margin-right: 5px;
+            letter-spacing: 6px;
+        }
+
+        .time_mid ul li:nth-child(3) {
+            border-left: solid 1px;
+            padding-left: 10px;
+        }
+
+        .time_mid ul li:nth-child(2) {
+            padding-left: 10px;
+        }
+
+        .time_mid ul li:nth-child(1) {
+            letter-spacing: 9px;
+        }
+
+        .time_bottom {
+            font-size: 20px;
+        }
+
+        .tb_left {
+            display: inline-flex;
+            width: 80px;
+            justify-content: space-between;
+            margin-right: 20px;
+            vertical-align: top;
+
+
+
+        }
+
+        .tb_right {
+            display: inline-block;
+            letter-spacing: 4.5px;
+            color: #FDD000;
+            padding-left: 2.5px;
+
+        }
+
+        .tb1 {
+            color: #F73939;
+
+        }
+
+        .tb2 {
+            color: #0FCFD8;
+            text-shadow: 0px 0px 3px #141468;
+        }
+
+        .tb3 {
+            color: #17E53E;
+        }
+
+        .tb4 {
+            color: #F96A32;
+        }
+
+        .pic {
+            padding: 15px;
+
+        }
+
+        .pic:hover {
+
+            cursor: pointer;
+        }
+        .container-fluid {
+            padding: 0px;
+        }
+
+        .container-sitemap {
+            background-color: rgb(123, 131, 139);
+            opacity: 0.8;
+            height: 140px;
+        }
+
+        .sitemap-all {
+
+            text-align: center;
+           
+
+        }
+
+        .sitemap {
+            display: inline-block;
+            margin-top: 60px;
+            border-right: solid 1px black;
+            line-height: 18px;
+            font-size: 18px;
+        }
+
+        .sitemap-all li a {
+            color: black;
+            font-weight:bold;
+            font-size: 20px;
+            padding: 18px;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background-color: #3D3D3D;
+            color: white;
+            text-align: center;
+        }
+        footer p {
+            margin:0px; 
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="time.html">時刻查詢</a>
+            </li>
+            <li>
+                <a href="movie.html">電影介紹</a>
+            </li>
+            <li>
+                <a href="ticket.html">票價資訊</a>
+            </li>
+            <li>
+                <a href="activity.html">活動公告</a>
+            </li>
+            <li>
+                <a href="about.html">關於影城</a>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="container-fluid">
+        <div class="container">
+
+            <div class="title" style="margin-bottom:20px;">
+                <img src="img/clapperboard.svg" alt="" width="73" height="55" style="margin-top: 9px;">
+                <span style="font-size:36px; font-weight:bold;margin-left:13px;margin-top:20px;">時刻查詢</span>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="date">
+                        <ul>
+                            <li>02/02-02/08/2018</li>
+                            <li>02/09-02/12/2018</li>
+                        </ul>
+                    </div>
+                    <div class="info1" style="letter-spacing:2px;">*上映廳別及場次，如有異動請以售票處當日公布為主</div>
+                </div>
+                <div class="col-md-9">
+                    <div style="border-bottom: solid 5px white; background-color:rgba(15,15,15,0.7)">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <a href="movie.html" class="hvr-float">
+                                    <img src="img/poster/mazeposter.jpg" alt="" class="img-fluid pic ">
+                                </a>
+
+                            </div>
+                            <div class="col-md-9" style="color: white;">
+                                <div class="time_right">
+                                    <div class="time_top">
+                                        <div class="tt_left" style="display:inline-block;">
+                                            <img src="img/12+.png" alt="" class="img-fluid ">
+                                        </div>
+                                        <div class="tt_right" style="display:inline-block;">
+                                            <p style="font-size:35px; letter-spacing: 5px; font-weight:bold;">移動迷宮：死亡解藥</p>
+                                            <p style="font-size:20px; letter-spacing: 3px;">Maze Runner: The Death Cure</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_mid">
+                                        <ul>
+                                            <li>2D英語</li>
+                                            <li>片長:2時22分</li>
+                                            <li>上映日期:2018/01/19</li>
+                                        </ul>
+                                    </div>
+                                    <div class="time_bottom">
+                                        <div class="tb_left tb1">
+                                            <span>鳳</span>
+                                            <span>廳</span>
+                                        </div>
+                                        <div class="tb_right">10:20 / 13:00 / 15:40 / 18:20 /
+                                            <br> 21:00 / 23:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border-bottom: solid 5px white;background-color:rgba(15,15,15,0.7) ">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <a href="movie.html" class="hvr-float">
+                                    <img src="img/poster/godposter.jpg" alt="" class="img-fluid pic">
+                                </a>
+
+                            </div>
+                            <div class="col-md-9" style="color: white;  ">
+                                <div class="time_right">
+                                    <div class="time_top">
+                                        <div class="tt_left" style="display:inline-block;">
+                                            <img src="img/12+.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="tt_right" style="display:inline-block;">
+                                            <p style="font-size:35px; letter-spacing: 10px; font-weight:bold;">與神同行</p>
+                                            <p style="font-size:20px; letter-spacing: 1.65px;">Along With the Gods: The Two Worlds</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_mid">
+                                        <ul>
+                                            <li>2D韓語</li>
+                                            <li>片長:2時20分</li>
+                                            <li>上映日期:2017/12/22</li>
+                                        </ul>
+                                    </div>
+                                    <div class="time_bottom">
+                                        <div class="tb_left tb2">
+                                            <span>龍</span>
+                                            <span>廳</span>
+                                        </div>
+                                        <div class="tb_right">10:00 / 12:40 / 15:20 / 18:00 /
+                                            <br>20:40 / 23:20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border-bottom: solid 5px white; background-color:rgba(15,15,15,0.7)">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <a href="movie.html" class="hvr-float">
+                                    <img src="img/poster/ghostposter.jpg" alt="" class="img-fluid pic">
+                                </a>
+
+                            </div>
+                            <div class="col-md-9" style="color: white; ">
+                                <div class="time_right">
+                                    <div class="time_top">
+                                        <div class="tt_left" style="display:inline-block;">
+                                            <img src="img/15+.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="tt_right" style="display:inline-block;">
+                                            <p style="font-size:35px; letter-spacing: 10px; font-weight:bold;">溫徹斯特鬼屋</p>
+                                            <p style="font-size:20px; letter-spacing: 5px;">Winchester</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_mid">
+                                        <ul>
+                                            <li>2D英語</li>
+                                            <li>片長:1時39分</li>
+                                            <li>上映日期:2018/02/02</li>
+                                        </ul>
+                                    </div>
+                                    <div class="time_bottom">
+                                        <div class="tb_left tb3">
+                                            <span>吉</span>
+                                            <span>祥</span>
+                                            <span>廳</span>
+                                        </div>
+                                        <div class="tb_right">10:30 / 14:50 / 19:10 / 23:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border-bottom: solid 5px white; background-color:rgba(15,15,15,0.7)">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <a href="movie.html" class="hvr-float">
+                                    <img src="img/poster/moneyposter.jpg" alt="" class="img-fluid pic">
+                                </a>
+
+                            </div>
+                            <div class="col-md-9" style="color: white;">
+                                <div class="time_right">
+                                    <div class="time_top">
+                                        <div class="tt_left" style="display:inline-block;">
+                                            <img src="img/15+.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="tt_right" style="display:inline-block;">
+                                            <p style="font-size:35px; letter-spacing: 10px; font-weight:bold;">金錢世界</p>
+                                            <p style="font-size:20px; letter-spacing: 5px;">All the Money in the World</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_mid">
+                                        <ul>
+                                            <li>2D英語</li>
+                                            <li>片長:2時13分</li>
+                                            <li>上映日期:2018/02/02</li>
+                                        </ul>
+                                    </div>
+                                    <div class="time_bottom">
+                                        <div class="tb_left tb3">
+                                            <span>吉</span>
+                                            <span>祥</span>
+                                            <span>廳</span>
+                                        </div>
+                                        <div class="tb_right">12:20 / 16:40 / 21:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border-bottom: solid 5px white; background-color:rgba(15,15,15,0.7)">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <a href="movie.html" class="hvr-float">
+                                    <img src="img/poster/lifeposter.jpg" alt="" class="img-fluid pic">
+                                </a>
+
+                            </div>
+                            <div class="col-md-9" style="color: white;">
+                                <div class="time_right">
+                                    <div class="time_top">
+                                        <div class="tt_left" style="display:inline-block;">
+                                            <img src="img/6+.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="tt_right" style="display:inline-block;">
+                                            <p style="font-size:35px; letter-spacing: 10px; font-weight:bold;">縮小人生</p>
+                                            <p style="font-size:20px; letter-spacing: 5px;">Downsizing</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_mid">
+                                        <ul>
+                                            <li>2D英語</li>
+                                            <li>片長:2時16分</li>
+                                            <li>上映日期:2018/01/26</li>
+                                        </ul>
+                                    </div>
+                                    <div class="time_bottom">
+                                        <div class="tb_left tb4">
+                                            <span>如</span>
+                                            <span>意</span>
+                                            <span>廳</span>
+                                        </div>
+                                        <div class="tb_right">11:50 / 14:20 / 16:50 / 19:20 /
+                                            <br>23:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border-bottom: solid 5px white; background-color:rgba(15,15,15,0.7)">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <a href="movie.html" class="hvr-float">
+                                    <img src="img/poster/beautyposter.jpg" alt="" class="img-fluid pic">
+                                </a>
+
+                            </div>
+                            <div class="col-md-9" style="color: white;">
+                                <div class="time_right">
+                                    <div class="time_top">
+                                        <div class="tt_left" style="display:inline-block;">
+                                            <img src="img/15+.png" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="tt_right" style="display:inline-block;">
+                                            <p style="font-size:35px; letter-spacing: 10px; font-weight:bold;">魍美</p>
+                                            <p style="font-size:20px; letter-spacing: 5px;">Net, I Die</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_mid">
+                                        <ul>
+                                            <li>2D英語</li>
+                                            <li>片長:2時16分</li>
+                                            <li>上映日期:2018/01/26</li>
+                                        </ul>
+                                    </div>
+                                    <div class="time_bottom">
+                                        <div class="tb_left tb4">
+                                            <span>如</span>
+                                            <span>意</span>
+                                            <span>廳</span>
+                                        </div>
+                                        <div class="tb_right">15:10 / 21:50</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container-sitemap">
+            <ul class=sitemap-all>
+                <li class=sitemap>
+                    <a href="time.html">時刻查詢</a>
+                </li>
+                <li class=sitemap>
+                    <a href="movie.html">電影介紹</a>
+                </li>
+                <li class=sitemap>
+                    <a href="ticket.html">票價資訊</a>
+                </li>
+                <li class=sitemap>
+                    <a href="activity.html">活動公告</a>
+                </li>
+                <li class=sitemap style="  border-right: none" ;>
+                    <a href="about.html">關於影城</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© Copyright All Rights Reserved.</p>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

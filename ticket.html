@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- boostrap的CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, rgba(206, 220, 231, 1) 0%, rgba(143, 151, 158, 1) 100%, rgba(149, 156, 165, 1) 100%);
+
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 1.5vw;
+            margin: 0 3vw;
+            color: #fff;
+            font-weight: 900;
+            /* text-shadow: 0 0 1vw rgb(15, 2, 99), 0 0 1vw rgb(39, 9, 231), 0 0 1vw rgb(35, 7, 221); */
+            cursor: pointer;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .menu1 {
+            float: left;
+            margin-bottom: 30px;
+           
+
+        }
+
+        .menu2 {
+            float: right;
+            width: 586px;
+           
+        }
+
+        .tt {
+            width: 330px;
+            position: relative;
+            left: -15px;
+
+
+        }
+
+        .tt1,
+        .tt2,
+        .tt3,
+        .ticket {
+            margin-bottom: 30px;
+        }
+
+        .tt img {
+            width: 100%;
+        }
+
+
+        .ticket img {
+            width: 100%;
+        }
+
+        .attention {
+            border: solid 2px;
+            font-size: 22px;
+            line-height: 40px;
+            letter-spacing: 3px;
+            position: relative;
+            padding: 10px;
+           
+            margin-bottom: 100px;
+        }
+
+        ul p {
+            position: absolute;
+            right: 20px;
+        }
+
+        .text-bottom {
+            font-size: 18px;
+            margin-top: 40px;
+            text-align: center;
+            list-style: none;
+        }
+        .container-fluid {
+            padding: 0px;
+        }
+
+        .container-sitemap {
+            background-color: rgb(123, 131, 139);
+            opacity: 0.8;
+            height: 140px;
+        }
+
+        .sitemap-all {
+
+            text-align: center;
+           
+
+        }
+
+        .sitemap {
+            display: inline-block;
+            margin-top: 60px;
+            border-right: solid 1px black;
+            line-height: 18px;
+            font-size: 18px;
+        }
+
+        .sitemap-all li a {
+            color: black;
+            font-weight:bold;
+            font-size: 20px;
+            padding: 20px;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        
+        footer {
+            background-color: #3D3D3D;
+            color: white;
+            text-align: center;
+        }
+        footer  p {
+            margin:0px; 
+            font-size:14px;        
+        }
+        @media screen and (max-width: 375px) {
+            .menu1,.menu2 {
+                display: block;
+            }
+            .sitemap-all {
+                display: block;
+                border-right:none;
+                line-height: 10px;
+            }
+        }
+            
+        
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="time.html">時刻查詢</a>
+            </li>
+            <li>
+                <a href="movie.html">電影介紹</a>
+            </li>
+            <li>
+                <a href="ticket.html">票價資訊</a>
+            </li>
+            <li>
+                <a href="activity.html">活動公告</a>
+            </li>
+            <li>
+                <a href="about.html">關於影城</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div class="container">
+        <div class="title">
+            <img src="img/clapperboard.svg" alt="" width="73" height="55" style="margin-top: 9px;">
+            <span style="font-size:36px; font-weight:bold;margin-left:13px;margin-top:20px;">票價資訊</span>
+        </div>
+        <div class="tt tt1">
+            <img src="img/ticke-tititle1.png" alt="" >
+        </div>
+        <div class="ticket">
+            <img src="img/ticket.png" alt="" class="img-fluid">
+        </div>
+        <div class="tt tt2">
+            <img src="img/ticket-title2.png" alt="" >
+        </div>
+        <div class="menu1">
+            <img src="img/menu1.jpg" alt=""  class="img-fluid">
+        </div>
+        <div class="menu2">
+            <img src="img/menu2.jpg" alt=""  class="img-fluid" style="height:349px;">
+        </div>
+        <div class="tt tt3">
+            <img src="img/ticket-title3.png" alt="" >
+        </div>
+
+        <div class="attention">
+            <ul>
+                <li>本院採用電腦劃位系統，各窗口皆可接受當日場次預約劃位。</li>
+                <li>購票時請再次確認日期、場次、片名及找零，離開櫃台後恕不負責。</li>
+                <li>兩歲以上未滿12歲，須購買學生票進場（購買學生票之學生請出示學生證明文件），購票成人限攜帶一位未滿兩歲兒童免費入場(限普遍級電影)。</li>
+                <li>團體票、優惠券請劃位入場。</li>
+                <li>逾期之團體票，請補足價差才能使用。</li>
+                <li>觀賞3D版電影，少數人因過於真實效果稍感暈眩不適，稍閉雙眼，不適應感可獲得改善，如仍感到不適，請與服務人員聯繫，提供必要協助。</li>
+                <li>觀賞3D立體版電影，請於電影散場時歸還3D眼鏡。</li>
+                <li>請遵守影片分級制度相關規定。</li>
+                <li>廳內全面禁止攝影及錄音。</li>
+                <li>本場所全面禁菸及嚼食檳榔，請勿攜帶酒類飲品及寵物入場。</li>
+                <p>謝謝合作</p>
+                <li class="text-bottom">本場所若有任何待改進事項，歡迎立即向服務人員反映。</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <div class="container-sitemap">
+            <ul class=sitemap-all>
+                <li class=sitemap>
+                    <a href="time.html">時刻查詢</a>
+                </li>
+                <li class=sitemap>
+                    <a href="movie.html">電影介紹</a>
+                </li>
+                <li class=sitemap>
+                    <a href="ticket.html">票價資訊</a>
+                </li>
+                <li class=sitemap>
+                    <a href="activity.html">活動公告</a>
+                </li>
+                <li class=sitemap style="  border-right: none" ;>
+                    <a href="about.html">關於影城</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>© Copyright All Rights Reserved.</p>
+    </footer>
+
+
+
+
+    <!-- bootstrap的js檔:共3個 -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

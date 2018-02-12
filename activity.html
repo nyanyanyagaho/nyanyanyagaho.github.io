@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- boostrap的CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- fontawesome的CDN -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- hover.css的css檔連結 -->
+    <link rel="stylesheet" href="css/hover-min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, "微軟正黑體", "Microsoft JhengHei", "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "標楷體", DFKai-SB, sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, rgba(206, 220, 231, 1) 0%, rgba(143, 151, 158, 1) 100%, rgba(149, 156, 165, 1) 100%);
+
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 1.5vw;
+            margin: 0 3vw;
+            color: #fff;
+            font-weight: 900;
+            /* text-shadow: 0 0 1vw rgb(15, 2, 99), 0 0 1vw rgb(39, 9, 231), 0 0 1vw rgb(35, 7, 221); */
+            cursor: pointer;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .ac1,
+        .ac2 {
+            margin-bottom: 30px;
+            border-bottom: solid 3px #F39C12;
+        }
+
+        .row.ac1.img-ac {
+            padding-bottom: 30px;
+        }
+
+        /* .ac1 {
+            padding-left: 16px;
+
+        } */
+
+        p {
+            letter-spacing: 5px;
+            font-size: 22px;
+        }
+
+        h5 {
+            font-weight: bolder;
+        }
+
+
+        .fb-title {
+            margin-bottom: 15px;
+            letter-spacing: 5px;
+            line-height: 40px;
+            border-bottom: solid 3px #F39C12;
+            color: rgb(34, 74, 155);
+            font-weight: bold;
+
+
+        }
+
+        h4 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .more {
+
+            text-align: center;
+            font-size: 26px;
+            color: #F39C12;
+            line-height: 40px;
+            margin-bottom: 60px;
+            font-weight: bold;
+
+        }
+
+        i {
+            margin-left: 10px;
+        }
+
+        .more:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .text-ac {
+            padding-left: 40px;
+        }
+
+        .img-ac {
+            margin-bottom: 30px;
+        }
+
+        .ac3,
+        .ac4 {
+            /* display: none; */
+            height: 0;
+            overflow: hidden;
+            transition: 1s;
+        }
+
+        .ac3.active {
+            /* display: block; */
+            height: 328px;
+            margin-bottom: 30px;
+            border-bottom: solid 3px #F39C12;
+        }
+
+        .ac4.active {
+            height: 212px;
+
+        }
+
+        .container {
+            margin-bottom: 60px;
+        }
+
+        .container-fluid {
+            padding: 0px;
+        }
+
+        .container-sitemap {
+            background-color: rgb(123, 131, 139);
+            opacity: 0.8;
+            height: 140px;
+        }
+
+        .sitemap-all {
+
+            text-align: center;
+
+
+        }
+
+        .sitemap {
+            display: inline-block;
+            margin-top: 60px;
+            border-right: solid 1px black;
+            line-height: 18px;
+            font-size: 18px;
+        }
+
+        .sitemap-all li a {
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 20px;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            background-color: #3D3D3D;
+            color: white;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0px;
+            font-size: 14px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="time.html">時刻查詢</a>
+            </li>
+            <li>
+                <a href="movie.html">電影介紹</a>
+            </li>
+            <li>
+                <a href="ticket.html">票價資訊</a>
+            </li>
+            <li>
+                <a href="activity.html">活動公告</a>
+            </li>
+            <li>
+                <a href="about.html">關於影城</a>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="container">
+        <div class="title" style="margin-bottom:20px;">
+            <img src="img/clapperboard.svg" alt="" width="73" height="55" style="margin-top: 9px;">
+            <span style="font-size:36px; font-weight:bold;margin-left:13px;margin-top:20px;">活動公告</span>
+
+        </div>
+
+        <div class="row">
+            <div class=" col-md-9">
+                <div class="row ac1 img-ac d-none d-md-block d-lg-block">
+                    <img src="img/ac1.jpg " alt="" class="img-fluid">
+                </div>
+                <div class="row ac2 ">
+                    <div class="col-md-4 img-ac">
+                        <img src="img/ac2.jpg" alt="">
+                    </div>
+                    <div class="col-md-8 text-ac">
+                        <h5>2018/01/27</h5>
+                        <h4>男神鳳小岳化身【萌牛費迪南】 萌萌噠療癒你!</h4>
+                        <p>
+                            春節唯一動畫電影
+                            <br> 農曆春節2.15(四)萌上大銀幕!
+                            <br> 吃完年夜飯記得來刷【萌牛費迪南】，現場抽出一位幸運粉絲，送超級無敵大隻的萌牛玩偶娃娃!!!
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="more ">MORE
+                            <i class="fas fa-long-arrow-alt-down hvr-hang "></i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row ac3">
+                    <div class="col-md-4 img-ac">
+                        <img src="img/ac3.jpg" alt="">
+                    </div>
+                    <div class="col-md-8 text-ac">
+                        <h5>2018/01/27</h5>
+                        <p>2/9只要購票買花甲大人轉男孩的票，一張票送一份紅包！！！（數量有限送完為止）</p>
+                    </div>
+                </div>
+                <div class="row ac4">
+                    <div class="col-md-4 img-ac">
+                        <img src="img/ac4.jpg" alt="">
+
+                    </div>
+                    <div class="col-md-8 text-ac">
+                        <h5>2018/01/27</h5>
+                        <p> 歡迎「臺灣同濟會」包場請小朋友看電影！</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 fb d-none d-xl-block">
+                <h4 class="fb-title">FaceBook最新消息</h4>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fethen.movie%2F&tabs=timeline&width=300&height=800&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="300" height="730" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container-sitemap">
+            <ul class=sitemap-all>
+                <li class=sitemap>
+                    <a href="time.html">時刻查詢</a>
+                </li>
+                <li class=sitemap>
+                    <a href="movie.html">電影介紹</a>
+                </li>
+                <li class=sitemap>
+                    <a href="ticket.html">票價資訊</a>
+                </li>
+                <li class=sitemap>
+                    <a href="activity.html">活動公告</a>
+                </li>
+                <li class=sitemap style="  border-right: none" ;>
+                    <a href="about.html">關於影城</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>© Copyright All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- bootstrap的js檔:共3個 -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        $(".more").click(function () {
+            console.log('test');
+            $(".ac3").toggleClass("active");
+            $(".ac4").toggleClass("active");
+            $(".more").css("display", "none");
+        });
+    </script>
+
+
+</body>
+
+</html>
